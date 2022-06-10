@@ -10,93 +10,80 @@ body {
   color: black;
 }
 
-@media only screen and (max-width: 768px) and (orientation: landscape) {
-  body {
-    font-size: 12px;
-  }
-}
-
 /* navbar section */
 header {
   height: 4rem;
   width: 100%;
+}
+
+/* desktop navbar */
+.desktop {
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.logo {
-  display: inline-flex;
-  font-size: 2rem;
   padding-left: 1.5rem;
-}
-
-.logo p {
-  align-items: center;
-  margin: auto;
-}
-
-.logo span {
-  color: grey;
-}
-
-.logo img {
-  height: 3.5rem;
-  margin: auto;
-}
-
-.desktop {
   padding-right: 1.5rem;
+}
+
+.nav-logo {
+  display: inline-flex;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.nav-logo img {
+  height: 3.5rem;
+}
+
+.nav-logo span {
+  color: grey;
 }
 
 .nav-item {
   display: inline-flex;
+}
+
+.nav-item li {
   list-style: none;
   padding-left: 1rem;
-  font-size: 1.5rem;
-  margin: auto;
+  font-size: 1.3rem;
+  text-decoration: none;
 }
 
 .nav-item a {
-  text-decoration: none;
   color: black;
-  font-size: 1rem;
 }
 
 .mobile {
   display: none;
 }
 
-/* mobile size */
+/* mobile navbar */
 @media only screen and (max-width: 872px) {
-  body {
-    font-size: 0.8em;
-  }
-
-  .logo {
-    display: none;
-  }
-
   .desktop {
     display: none;
   }
 
   .mobile {
-    display: flex;
-    width: 100%;
+    display: block;
+    height: 100%;
   }
 
   .mobile-flex {
-    width: 100%;
-    display: inline-flex;
+    height: 100%;
+    display: flex;
     justify-content: space-around;
-  }
-
-  .mobile-logo {
-    display: inline-flex;
+    align-items: center;
     list-style: none;
   }
 }
+/* 
+@media only screen and (min-width: 872px) and (max-width: ) {
+  body {
+    font-size: 10px;
+  }
+} */
 
 body {
   border: 1px solid grey;
@@ -196,6 +183,7 @@ body {
 .border1 {
   border-bottom: 1px solid grey;
 }
+
 .border2 {
   border-top: 1px solid grey;
 }
@@ -262,12 +250,15 @@ a {
     margin: 0;
     padding-left: 0;
   }
+
   .highlighted {
     background-color: white;
   }
+
   .border1 {
     border: none;
   }
+
   .border2 {
     border: none;
   }
@@ -387,6 +378,7 @@ a {
   .mobile-media {
     display: block;
     width: 100%;
+    border: none;
   }
 }
 
